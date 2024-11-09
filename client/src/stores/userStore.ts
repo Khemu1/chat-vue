@@ -8,13 +8,13 @@ export const useUserDataStore = defineStore("userDataStore", {
   }),
 
   actions: {
-    connectSocket(id: number, socketId: string) {
+    userChosen(id: number, socketId: string) {
       this.userId = id;
       this.socketId = socketId;
       this.online = true;
     },
 
-    disconnectSocket() {
+    userDisconnected() {
       this.userId = null;
       this.socketId = null;
       this.online = false;
